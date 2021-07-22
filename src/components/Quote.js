@@ -1,9 +1,18 @@
 import React from 'react'
 
+function filterTags(tagsArray) {
+    if (tagsArray === undefined || tagsArray === null) {
+        // checks if undefined
+    } else {
+        const separate = tagsArray.filter(item => item).join(', ');    
+        return separate
+    }
+}
+
 function Quote({ quote }) {
     return (
         <div className="quote">
-            <div className="tags" title={quote.tags.filter(item => item).join(', ')}>{quote.tags.filter(item => item).join(', ')}</div>
+            <div className="tags" title={filterTags(quote.tags)}>{filterTags(quote.tags)}</div>
             <blockquote>
                 {quote.content}
             </blockquote>
