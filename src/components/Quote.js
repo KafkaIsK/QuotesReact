@@ -4,7 +4,10 @@ function filterTags(tagsArray) {
     if (tagsArray === undefined || tagsArray === null) {
         // checks if undefined
     } else {
-        const separate = tagsArray.filter(item => item).join(', ');    
+        for (let i = 0; i < tagsArray.length; i++) {
+            tagsArray[i] = tagsArray[i][0].toUpperCase() + tagsArray[i].substr(1);
+        }
+        const separate = tagsArray.join(', ');    
         return separate
     }
 }
