@@ -70,7 +70,7 @@ blockquote {
   bottom: 0;
 }
 
-button {
+.buttons button {
   appearance: none;
   border: none;
   outline: none;
@@ -78,14 +78,27 @@ button {
   color: white;
   border-radius: 3rem;
   padding: 0.75rem 1.5rem;
-  margin-top: 64px;
-  margin-bottom: 64px;
-  transition: 0.4s;
+  /* margin-top: 64px;
+  margin-bottom: 64px; */
+  margin: 64px 10px;
+  transition: 0.4s ease;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
 }
 
-button:hover {
+.buttons button:hover {
   background-color: var(--secondary);
+}
+
+.buttons button.tweet {
+  background-color: #26a7de;
+}
+
+.buttons button.tweet:hover {
+  background-color: #1b87b5;
+}
+
+.buttons button.tweet .twitter {
+  color: white;
 }

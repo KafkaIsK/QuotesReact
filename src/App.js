@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Quote from './components/Quote';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
   const [quote, setQuote] = useState({
@@ -30,7 +32,12 @@ function App() {
     <div className="App">
       <Quote quote={quote} />
 
-      <button onClick={generate}>Generate New Quote</button>
+      <div className="buttons">
+        <button onClick={generate}>Generate New Quote</button>
+        <button className="tweet" onClick="">
+          <a href={`https://twitter.com/intent/tweet?text=${quote.content}--${quote.author}`}><FontAwesomeIcon className="twitter" icon={faTwitter} /></a>
+        </button>
+      </div>
     </div>
   );
 }
