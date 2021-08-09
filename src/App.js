@@ -5,8 +5,8 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
   const [quote, setQuote] = useState({
-    anime: null,
-    character: null,
+    tag: null,
+    author: null,
     quote: null
   });
 
